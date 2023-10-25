@@ -1,0 +1,37 @@
+.footer {
+  background-color: #FF9400;
+  position: fixed;
+  bottom: 0;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta a posição para ficar centralizado */
+  width: 450px; /* Largura definida */
+  text-align: center;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer-button {
+  background-color: #ffffff;
+  color: #FF9400;
+  border: none;
+  border-radius: 50%;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 125px;
+  height: 125px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1; /* Para garantir que o círculo fique abaixo do botão */
+}

@@ -1,0 +1,64 @@
+.agendamentos-container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  top: 100px;
+  font-family: Arial, sans-serif;
+}
+
+.agendamentos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.agendamento {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.horario {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.imagem-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.imagem img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.nome {
+  font-weight: bold;
+}
+
+.contato button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.detalhes {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Adicione mais estilos conforme necessário */
+

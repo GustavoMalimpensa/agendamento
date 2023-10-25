@@ -1,0 +1,158 @@
+<div class="event-schedule-area-two bg-color pt-5">
+    <div class="container">
+       <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title text-center">
+            <div class="title-text">
+              <hr style="width: 100%;">
+            </div>
+          </div>
+        </div>
+        <!-- /.col end-->
+    </div>
+        <!-- row end-->
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="nav custom-tab" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active show" id="home-taThursday" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Terça</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Quarta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Quinta</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a class="nav-link" id="sunday-tab" data-toggle="tab" href="#sunday" role="tab" aria-controls="sunday" aria-selected="false">Sexta</a>
+                    </li>
+                    <li class="nav-item mr-0 d-none d-lg-block">
+                        <a class="nav-link" id="monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="monday" aria-selected="false">Sábado</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active show" id="home" role="tabpanel">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th class="text-center bg-primary" style="margin-left: auto; margin-right: auto;" scope="col">Manhã</th>
+                                    <th class="text-center bg-primary" style="margin-left: auto; margin-right: auto;" scope="col">Tarde</th>
+                                    <th class="text-center bg-primary" style="margin-left: auto; margin-right: auto;" scope="col">Noite</th>
+                                  </tr>
+                                </thead>
+                              
+                                <tbody>
+                                  <td class="inner-box">
+                                    <div class="d-flex flex-column align-items-center">
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(1)">09:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(2)">10:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(3)">11:00</button>
+                                      </div>
+                                      <div class="btn btn-primary">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(4)">12:00</button>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  
+                                  <td class="inner-box">
+                                    <div class="d-flex flex-column align-items-center">
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(1)">14:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(2)">15:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(3)">16:00</button>
+                                      </div>
+                                      <div class="btn btn-primary">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(4)">17:00</button>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  
+                                  <td class="inner-box">
+                                    <div class="d-flex flex-column align-items-center">
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(1)">18:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(2)">19:00</button>
+                                      </div>
+                                      <div class="btn btn-primary mb-3">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(3)">20:00</button>
+                                      </div>
+                                      <div class="btn btn-primary">
+                                        <button class="btn btn-primary btn-block" (click)="openModal(4)">21:00</button>
+                                      </div>
+                                    </div>
+                                  </td>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /col end-->
+        </div>
+        <!-- /row end-->
+    </div>
+</div>
+
+<ng-template #modalTemplate>
+  <div class="modal-header bg-primary text-white">
+    <h4 class="modal-title pull-left">{{ title }}</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <!-- Formulário para preencher os campos do agendamento -->
+    <form>
+      <div class="mb-3">
+        <label for="date" class="form-label">Data:</label>
+        <input type="date" class="form-control" id="date" name="date" [(ngModel)]="agendamento.date">
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Horário:</label>
+        <input type="time" class="form-control" id="time"  name="time" [(ngModel)]="agendamento.time">
+      </div>
+      <div class="mb-3">
+        <label for="service" class="form-label">Escolha o serviço:</label>
+        <select class="form-select" id="service" name="service" [(ngModel)]="agendamento.service">
+          <option value="Cortar o cabelo">Cortar o cabelo</option>
+          <option value="Fazer a sombrancelha">Fazer a sombrancelha</option>
+          <option value="Fazer a barba">Fazer a barba</option>
+          <!-- Adicione mais opções conforme necessário -->
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Observação:</label>
+        <input type="text" class="form-control" id="content" name="content" [(ngModel)]="agendamento.content">
+      </div>
+      <div class="mb-3">
+        <input type="hidden" id="user_id" [(ngModel)]="agendamento.user_id">
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modalRef?.hide()">Cancelar</button>
+    <button type="button" class="btn btn-primary" (click)="agendar()">Agendar</button>
+  </div>
+</ng-template>
+
+
+<div class="alert alert-success" *ngIf="successMessage">
+  {{ successMessage }}
+</div>
+
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>

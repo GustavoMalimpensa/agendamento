@@ -1,0 +1,8 @@
+button{
+    width: 400px;
+}
+.agendar {
+    position: fixed;
+    bottom: 520px;
+    left: 68%;
+}

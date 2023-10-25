@@ -1,0 +1,13 @@
+table {
+    position: fixed;
+    bottom: 0px;
+    left: 68%;
+    height: 400px;
+    width: 400px;
+}
+
+h1 {
+    position: fixed;
+    left: 68%;
+    bottom: 420px;
+}
